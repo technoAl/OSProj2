@@ -10,7 +10,7 @@ using namespace std;
 #include <stdlib.h>
 #include <fcntl.h>
 #include <string.h>
-#include <sys/stat.h>
+#include <sys/wait.h>
 #include <sys/mman.h>
 
 int BUFSIZE = 1024;
@@ -50,13 +50,13 @@ main(int argc, char *argv[])
                 cout << "Too many processes required." << "\n";
                 exit(0);
             }
-            cout << totalProcesses << "\n";
+            //cout << totalProcesses << "\n";
         } else {
             BUFSIZE = atoi(argv[3]);
         }
     }
 
-    cout << target << "\n";
+    //cout << target << "\n";
 
     int count = 0;
     int fileSize = 0;
@@ -92,22 +92,23 @@ main(int argc, char *argv[])
             pid_t pids[totalProcesses];
 
             int processSplit = sb.st_size / totalProcesses;
+            //cout << "size"<< processSplit << "\n";
 
             for (int i = 0; i < totalProcesses; i++) {
                 if ((pids[i] = fork()) < 0) {
                     perror("fork");
                     abort();
                 } else if (pids[i] == 0) {
-                    cout << getpid() << " " << getppid() << " " << i << "\n";
-                    cout.flush();
 
                     int count = 0;
-                    for (int j = i * processSplit; j < (i+1) * provessSplit; j++) {
-                        if (pchFile[i] == target) {
+                    for (int j = i * processSplit; j < (i+1) * processSplit; j++) {
+                        if (pchFile[j] == target) {
                             count++;
                         }
                     }
-                    cout << getpid() << " " << count;
+                    cout << "Process Id: " << getpid() << " found " << count << " occurrences of " << "'" << target << "'" << "\n";
+                    cout << "Read from bytes " << i * processSplit << " to " << (i+1) * processSplit - 1 << "\n\n";
+                    cout.flush();
                     exit(0);
                 }
             }
@@ -118,9 +119,18 @@ main(int argc, char *argv[])
             exit(1);
         }
     }
-    cout << "File size: " << fileSize << " bytes.\n";
-    cout << "Occurrences of the character " << target << ": "<< count << "\n";
-    cout.flush();
+
+    while(totalProcesses > 0){
+        int pid = wait(0);
+        //cout << pid << "is done \n";
+        totalProcesses--;
+    }
+
+    if(totalProcesses == -1){
+        cout << "File size: " << fileSize << " bytes.\n";
+        cout << "Occurrences of the character " << "'" <<target << "'" <<  ": "<< count << "\n";
+        cout.flush();
+    }
 
     if (fdIn > 0)
         close(fdIn);
