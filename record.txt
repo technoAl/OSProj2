@@ -1,0 +1,85 @@
+Script started on 2021-09-17 01:15:26-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;alexander@alexander-VirtualBox: ~/Desktop/proj2[01;32malexander@alexander-VirtualBox[00m:[01;34m~/Desktop/proj2[00m$ ./proj2 essay.txt s
+[?2004lFile size: 7457 bytes.
+Occurrences of the character 's': 329
+[?2004h]0;alexander@alexander-VirtualBox: ~/Desktop/proj2[01;32malexander@alexander-VirtualBox[00m:[01;34m~/Desktop/proj2[00m$ ./proj2 essay.txt s 1000
+[?2004lFile size: 7457 bytes.
+Occurrences of the character 's': 329
+[?2004h]0;alexander@alexander-VirtualBox: ~/Desktop/proj2[01;32malexander@alexander-VirtualBox[00m:[01;34m~/Desktop/proj2[00m$ ./proj2 essay.txt s 1000[K[K[K[Kmmap
+[?2004lFile size: 7457 bytes.
+Occurrences of the character 's': 329
+[?2004h]0;alexander@alexander-VirtualBox: ~/Desktop/proj2[01;32malexander@alexander-VirtualBox[00m:[01;34m~/Desktop/proj2[00m$ ./proj2 essay.txt s mmap[K[K[K[Kp2
+[?2004lProcess Id: 2942 found 162 occurrences of 's' from bytes 0 to 3727
+
+Process Id: 2943 found 167 occurrences of 's' from bytes 3728 to 7456
+
+File size: 7457 bytes.
+[?2004h]0;alexander@alexander-VirtualBox: ~/Desktop/proj2[01;32malexander@alexander-VirtualBox[00m:[01;34m~/Desktop/proj2[00m$ ./proj2 essay.txt s p2[K16
+[?2004lProcess Id: 2945 found 20 occurrences of 's' from bytes 0 to 465
+
+Process Id: 2946 found 19 occurrences of 's' from bytes 466 to 931
+
+Process Id: 2950 found 19 occurrences of 's' from bytes 2330 to 2795
+
+Process Id: 2949 found 13 occurrences of 's' from bytes 1864 to 2329
+
+Process Id: 2951 found 20 occurrences of 's' from bytes 2796 to 3261
+
+Process Id: 2952 found 22 occurrences of 's' from bytes 3262 to 3727
+
+Process Id: 2953 found 24 occurrences of 's' from bytes 3728 to 4193
+
+Process Id: 2955 found 22 occurrences of 's' from bytes 4660 to 5125
+
+Process Id: 2954 found 23 occurrences of 's' from bytes 4194 to 4659
+
+Process Id: 2948 found 23 occurrences of 's' from bytes 1398 to 1863
+
+Process Id: 2959 found 23 occurrences of 's' from bytes 6524 to 6989
+
+Process Id: 2958 found 20 occurrences of 's' from bytes 6058 to 6523
+
+Process Id: 2957 found 15 occurrences of 's' from bytes 5592 to 6057
+
+Process Id: 2956 found 25 occurrences of 's' from bytes 5126 to 5591
+
+Process Id: 2960 found 15 occurrences of 's' from bytes 6990 to 7456
+
+Process Id: 2947 found 26 occurrences of 's' from bytes 932 to 1397
+
+File size: 7457 bytes.
+[?2004h]0;alexander@alexander-VirtualBox: ~/Desktop/proj2[01;32malexander@alexander-VirtualBox[00m:[01;34m~/Desktop/proj2[00m$ ./proj2 essay.txt s p16[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@1[1@2[1@8[1@M[1@B[1@F[1@i[1@l[1@e[C[C[C[C[C[C[K[K2[C[C[3@d./[1@o[2@it[1@ 
+[?2004lProcess Id: 2964 found 1032714 occurrences of 's' from bytes 0 to 63999999
+
+Process Id: 2965 found 1032523 occurrences of 's' from bytes 64000000 to 127999999
+
+File size: 128000000 bytes.
+
+Statistics:
+ - System CPU Time Used: 0 milliseconds 
+ - User CPU Time Used: 3.768 milliseconds 
+ - Walk Clock Time Spent: 1261.95 milliseconds
+ - Involuntary Context Switches: 0
+ - Voluntary Context Switches: 0
+ - Major Page Faults: 0
+ - Minor Page Faults: 142
+ - Maximum Resident Set Size used: 2400
+
+[?2004h]0;alexander@alexander-VirtualBox: ~/Desktop/proj2[01;32malexander@alexander-VirtualBox[00m:[01;34m~/Desktop/proj2[00m$ ./doit ./proj2 128MBFile s p2[K[Kmmap
+[?2004lFile size: 128000000 bytes.
+Occurrences of the character 's': 2065237
+
+Statistics:
+ - System CPU Time Used: 0 milliseconds 
+ - User CPU Time Used: 3.209 milliseconds 
+ - Walk Clock Time Spent: 317.9 milliseconds
+ - Involuntary Context Switches: 0
+ - Voluntary Context Switches: 1
+ - Major Page Faults: 0
+ - Minor Page Faults: 140
+ - Maximum Resident Set Size used: 2400
+
+[?2004h]0;alexander@alexander-VirtualBox: ~/Desktop/proj2[01;32malexander@alexander-VirtualBox[00m:[01;34m~/Desktop/proj2[00m$ script[K[K[K[K[K[Kexit
+[?2004lexit
+
+Script done on 2021-09-17 01:16:42-04:00 [COMMAND_EXIT_CODE="0"]

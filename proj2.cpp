@@ -23,7 +23,7 @@ main(int argc, char *argv[])
     struct stat sb;
 
     if (argc < 2) {
-        fdIn = 0; 
+        fdIn = 0;
 
     } else if ((fdIn = open(argv[1], O_RDONLY)) < 0) {
         cerr << "file open\n";
